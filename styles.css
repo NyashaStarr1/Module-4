@@ -47,31 +47,30 @@ a:hover{ color: #8B3A3A; text-decoration: underline; }
 a:active{ color: #5C2828;position: relative;
   z-index: 5;
 }
+header{
+    position: relative;
+    z-index: 1000;}
 
 .header-wrapper{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
+  gap: 10px;max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
 .logo img{
-  max-width:240px;        
-  height: auto;
-  display: block;
-position: relative;
-  top: 28px;
-  left: 0;}
+  max-width:300px;position: relative;
+z-index: 2;margin-bottom: -100px}
 
 nav{
   display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-position: relative;
-  top: 28px;
-  left: 0;}
+  gap: 14px;
+  margin-left: auto;
+  flex-wrap: wrap;}
+  
 
 nav a{
   display: inline-block;
@@ -156,25 +155,19 @@ p{
 
 
 .hero{
-margin-top: -10px;
-  margin-right: auto;
-  margin-bottom: 30px;
-  margin-left: auto;
-
-  padding-top: 18px;
-  padding-right: 18px;
-  padding-bottom: 18px;
-  padding-left: 18px;
-
+  max-width: 1200px;
+  margin: 18px auto 30px auto;
+  padding: 18px;
   display: flex;
   gap: 22px;
 
-  background-color: #F0E1D1;
-  border: 2px solid rgba(44,36,22,.18);
+  background: #F3EFE7;
   border-radius: 14px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.22);
- position: relative;
-  overflow: hidden;
+  border: 2px solid rgba(30,30,30,.15);
+  box-shadow: 0 10px 24px rgba(0,0,0,.22);
+
+  position: relative;
+  z-index: 1;
 }
 
 .hero-left{
@@ -187,8 +180,8 @@ margin-top: -10px;
   height: auto;
   display: block;
   border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.25);
 }
-
 
 .hero-left:after{
   content: "";
@@ -198,28 +191,35 @@ margin-top: -10px;
   width: 45%;
   height: 100%;
   pointer-events: none;
-
-  background-image: linear-gradient(
-    to right,
+background: linear-gradient(to right,
     rgba(240,225,209,0) 0%,
-    rgba(240,225,209,.85) 55%,
+    rgba(240,225,209,.55) 40%,
     rgba(240,225,209,1) 100%
   );
 }
- 
 
 
 
-.hero-right{
-  flex: 1;
-  align-self: flex-start;
 
-  background-color: rgba(240,225,209,.92);
-  border: 1px solid rgba(44,36,22,.16);
-  border-radius: 12px;padding-top: 18px;
-  padding-right: 18px; padding-bottom: 18px; padding-left: 18px; height: auto;
+.learnmore{
+  display: inline-block;
+  margin-top: 10px;
+
+  background: #26436C;
+  color: #F3EFE7;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,.25);
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 6px 14px rgba(0,0,0,.25);
 }
-.hero-btn{display: inline-block; margin-top: 10px;}
+.learnmore:hover{
+  background: #EFEDE7;
+}
+
+
+
 
 .divider{
   max-width: 900px;
@@ -239,10 +239,7 @@ margin-top: -10px;
 
 .divider p{
   font-family: "Libre Baskerville", Georgia, serif;
-  font-size: 18px;
-  font-style: italic;
-
-  color: #2C2416;
+  font-size: 18px; font-weight: 800; color: #EFEDE7; text-shadow: 0 2px 10px rgba(0,0,0,.25);
 
   border-top: 1px rgba(240,225,209,.45);
   border-bottom: 1px rgba(240,225,209,.45); margin: 0; padding-top: 16px;
@@ -409,7 +406,12 @@ box-shadow: 0 4px 12px rgba(0,0,0,0.20);}
   margin-bottom: 0;
   margin-left: 0;
 }
-
+.actions .button{
+  min-width: 180px;
+  flex: 1;
+  color: #F0E1D1;
+  font-weight: 700;
+}
 .button{color: #F0E1D1;;
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 700;
@@ -430,16 +432,19 @@ box-shadow: 0 4px 12px rgba(0,0,0,0.20);}
 }
 
 
-.primary{
-  background-color: #2E4F5C;
-  border-color: #2E4F5C;
+.actions .primary{
+  background: linear-gradient(145deg, #26436C, #1B2F4A);
+  color: #F0E1D1;
 }
-
-.secondary{
-  background-color: #8B3A3A;
-  border-color: #8B3A3A;
+.actions .secondary{
+  background: linear-gradient(145deg, #9C423F, #6B2A28);
+  color: #F0E1D1;
 }
-
+.actions .button{
+  box-shadow:
+    0 6px 12px rgba(0,0,0,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.2);
+}
 .button:hover{
   filter: brightness(1.05);
   text-decoration: none;
@@ -470,8 +475,8 @@ box-shadow: 0 4px 12px rgba(0,0,0,0.20);}
 }
 
 .platforms img{
-  width: 70px;
-   height: auto;
+  width: 90px;
+   margin: 0 10px;
 }
 
 
@@ -542,3 +547,4 @@ footer p{
     height: 260px;
   }
 }
+
